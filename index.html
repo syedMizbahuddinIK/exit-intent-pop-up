@@ -38,13 +38,12 @@
     <!-- Modal Popup -->
     <script type="text/javascript">
       $(document).ready(function(){
-        count = 1;
+        var popUpUsed = false
         $(document).mouseleave(function(){
-          console.log("outside view port")
-          if(count != 1){
+          if(!popUpUsed){
             $("#MyPopup").modal("show");
+            popUpUsed = true
           }
-          count++
         })
       })
     </script>
